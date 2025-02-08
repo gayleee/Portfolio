@@ -25,10 +25,11 @@
             text-decoration: none;
             color: #fff;
         }
-        .btn{
+        /* .btn{
+            border: none;
             background-color: #7862E8;
             transition: ease-in-out 0.3s;
-        }
+        } */
         .btn:hover{
             background-color: #7862E8;
         }
@@ -48,34 +49,6 @@
             max-width: 80%;
             height: auto;
             margin-bottom: 16px;
-        }
-        .thumbnailContainer{
-            width: 100%;
-            max-height: 400px;
-            position: relative;
-            overflow: hidden;
-        }
-        .thumbnailGradient{
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            position: absolute;
-            background: linear-gradient(to right, rgba(120, 98, 232, 0.8), rgba(248, 63, 67, 0.8));
-            opacity: 0;
-            transition: opacity ease-in-out 0.3s;
-        }
-        .thumbnail.img-fluid{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            z-index: 1;
-            position: relative;
-        }
-        .thumbnailContainer:hover .thumbnailGradient{
-            opacity: 1;
         }
         .card{
             background-color: #1A1A1A;
@@ -101,12 +74,6 @@
             object-fit: contain;
         }
         @media (max-width: 575px){
-            #projectsContainer{
-                text-align: center;
-            }
-            .box{
-                text-align: center;
-            }
             #hero{
                 min-height: auto;
                 padding: 24px 8px;
@@ -123,17 +90,6 @@
     </style>
 </head>
 <body>
-    <!-- <nav class="navbar navbar-expand-lg" style="height: 80px;">
-        <div class="container-fluid justify-content-end align-items-center nav">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="themeToggle">
-                <label class="form-check-label" for="themeToggle">
-                    <i class="bi bi-sun" id="themeIcon"></i>
-                </label>
-            </div>
-        </div>
-    </nav> -->
-
     <nav class="navbar fixed-top" style="background-color: #0D0D0D;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -142,7 +98,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end" style="background-color: #0D0D0D;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" style="background-color: #1A1A1A;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">CGT Portfolio</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -170,17 +126,17 @@
                     <div>
                         <img src="images/banner.png" class="img-fluid mt-5" alt="banner">
                     </div>
-                    <!-- <p class="mx-5">
-                        Welcome to my portfolio! I'm an aspiring UI/UX designer driven by a love 
-                        for art and creativity. Design is where I bring ideas to life.
-                        Take a look around – I hope you'll gain insight with what I've created!
-                    </p> -->
-                    <a class="px-5 py-2 rounded-1 mx-auto heroButton" href="#music" type="button">
-                        Explore
+                    <p class="mx-5 text-light">
+                        Welcome to my portfolio! I'm passionate about bringing ideas to life through design.  
+                        Please explore my work and I hope you enjoy what you see.
+                    </p>
+                    <a class="btn btn-outline-primary px-5 py-2 rounded-1 mx-auto heroButton" href="#language" type="button">
+                        Contact Now
                     </a>
-                    <a class="btn px-5 py-2 rounded-1 mx-auto heroButton text-light" href="#projects" type="button">
-                        Contact now
-                    </a>
+                    <!-- <a class="btn px-5 py-2 rounded-1 mx-auto heroButton text-light" href="#about" type="button">
+                        Download CV
+                    </a> -->
+                    <button type="button" class="btn btn-lg rounded-1 py-2 px-5">Donwload CV</button>
                 </div>
             </div>
         </div>
@@ -250,67 +206,13 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <div class="row" id="projectsContainer">
-                <h3 class="text-light px-4 mt-5">Projects</h3>
-            </div>
-        </div>
-    </section>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
-        var outputNumber = [
-            "SAM A02",
-            "SAM A04",
-            "SAM M01"
-        ]
-        var outputName = [
-            "Germany Tour Website",
-            "Final Fantasy API Website",
-            "Video Embed"
-        ]
-        var output = [
-            "A02/index.html",
-            "A04/index.html",
-            "M01/index.html"
-        ]
-        var outputDesc = [
-            "This website is designed to showcase a location of our choice. The main requirement is that it must be responsive using Bootstrap classes.",
-            "This website utilizes a free public API. The main requirement is that it must have a JSON return and must be responsive using Bootstrap classes.",
-            "This website utilizes youtube embed API. The main requirement is it must be responsive using Bootstrap classes."
-        ]
-        var outputThumbnail = [
-            "https://i.imgur.com/pMcPLPE.png",
-            "https://i.imgur.com/07jmhaO.png",
-            "https://i.imgur.com/IHNYJy1.png"
-        ]
-
-        for(var i = 0; i < output.length; i++){
-            var container = document.getElementById("projectsContainer");
-            container.innerHTML += `
-                <div class="col-lg-3 my-2">
-                    <div class="thumbnailBox mx-auto px-3 py-1">
-                        <a href="`+ output[i] +`">
-                            <div class="thumbnailContainer my-3">
-                                <div class="thumbnailGradient"></div>
-                                <img src="`+ outputThumbnail[i] +`" class="thumbnail img-fluid" alt="activityThumbnail">
-                                <div class="card-img-overlay text-light text-center d-flex justify-content-center align-items-center">
-                                    <p>Learn more</p>
-                                </div>
-                            </div>
-                        </a> 
-                        <h5>`+ outputNumber[i] +`</h5>
-                        <h3 class="text-light">`+ outputName[i] +`</h3>
-                        <p class="text-secondary">`+ outputDesc[i] +`</p>
-                    </div>
-                </div>`
-        };
         var cardTitle = [
             "UI/UX Design",
             "Front-end Web Development",
             "Front-end App Development",
-            "Graphic Design"
+            "Multimedia"
         ]
         var cardDesc = [
             "I create my designs using tools like Figma to make interfaces, vectors, etc. For other visuals, I use Canva for its free-to-use assets and Medibang for detailed and personalized illustrations.",

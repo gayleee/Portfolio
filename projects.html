@@ -12,6 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         html, body{
+            background-color: #0D0D0D;
             font-family: "Bebas Neue", "sans-serif";
             overflow-x: hidden;
             margin: 0;
@@ -20,17 +21,19 @@
         p{
             font-family: "Montserrat", "sans-serif";
         }
-        a{
+        /* a{
+            font-size: 24px;
             text-decoration: none;
             color: #fff;
-        }
-        .btn{
+        } */
+        /* .btn{
+            font-size: 24px;
             background-color: #7862E8;
             transition: ease-in-out 0.3s;
         }
         .btn:hover{
             background-color: #7862E8;
-        }
+        } */
         #hero{
             background-image: url(images/bg.png);
             background-size: cover;
@@ -39,7 +42,7 @@
             width: 100%;
             overflow: hidden;
         }
-        #hero a{
+        /* #hero a{
             display: inline-block;
             margin: 8px 0;
         }
@@ -47,9 +50,10 @@
             max-width: 80%;
             height: auto;
             margin-bottom: 16px;
-        }
+        } */
         .thumbnailContainer{
             width: 100%;
+            /* height: 100%; */
             max-height: 400px;
             position: relative;
             overflow: hidden;
@@ -76,10 +80,6 @@
         .thumbnailContainer:hover .thumbnailGradient{
             opacity: 1;
         }
-        .card{
-            box-shadow: 0px 4px 10px rgba(120, 98, 232, 0.2), 0px 8px 20px rgba(26, 48, 185, 0.2);
-
-        }
         .card-img-overlay{
             top: 0;
             left: 0;
@@ -90,14 +90,16 @@
         .thumbnailContainer:hover .card-img-overlay{
             opacity: 1;
         }
-        .logo img{
-            width: 50%;
-            /* aspect-ratio: 3 / 2; */
-            aspect-ratio: 4 / 3;
-            object-fit: contain;
+        .tab-content {
+            height: 60vh;
+            overflow-y: auto;
+            overflow-x: hidden; 
         }
         @media (max-width: 575px){
             #projectsContainer{
+                text-align: center;
+            }
+            #uiContainer{
                 text-align: center;
             }
             .box{
@@ -119,48 +121,92 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="height: 80px;">
-        <div class="container-fluid justify-content-end align-items-center nav">
-            <!-- <img src="https://i.imgur.com/isOXdFy.png" alt="logo" style="height: 32px;"> -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="themeToggle">
-                <label class="form-check-label" for="themeToggle">
-                    <i class="bi bi-sun" id="themeIcon"></i>
-                </label>
+    <nav class="navbar fixed-top" style="background-color: #0D0D0D;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://i.imgur.com/isOXdFy.png" alt="logo" style="height: 32px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" style="background-color: #1A1A1A;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">CGT Portfolio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" href="#index">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#projects">Projects</a>
+                  </li>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
-    <section id="hero">
-        <div class="container-fluid text-center text-justify">
-            <div class="row vh-100 d-flex flex-column align-items-center justify-content-center">
-                <div class="col-lg-12">
-                    <div>
-                        <img src="images/banner.png" class="img-fluid mt-5" alt="banner">
-                    </div>
-                    <!-- <p class="mx-5">
-                        Welcome to my portfolio! I'm an aspiring UI/UX designer driven by a love 
-                        for art and creativity. Design is where I bring ideas to life.
-                        Take a look around – I hope you'll gain insight with what I've created!
-                    </p> -->
-                    <a class="px-5 py-2 rounded-1 mx-auto heroButton" href="#music" type="button">
-                        Explore the site
-                    </a>
-                    <a class="btn px-5 py-2 rounded-1 mx-auto heroButton text-light" href="#projects" type="button">
-                        Contact now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="container-fluid" id="hero">
+        <h1 class="text-light mb-5">Projects</h1>
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-secondary" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">UI/UX Design</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-secondary" id="profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false">Programming</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-secondary" id="contact-tab" data-bs-toggle="tab"
+                    data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                    aria-selected="false">Multimedia</button>
+            </li>
+        </ul>
 
-    <section id="projects">
-        <div class="container">
-            <div class="row" id="projectsContainer">
-                <h3 class="px-4 mt-5">Projects</h3>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row" id="uiContainer"></div>
+            </div>
+
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row" id="projectsContainer"></div>
+        </div>
+
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="col-lg-2 my-2">
+                <img src="images/art.png" class="img-fluid" alt="artAsset">
+                <h3 class="text-light my-2">Grunge-style Assets</h3>
+                <p class="text-secondary my-2">
+                    The illustrations in these designs were created by me using Medibang, and then refined in 
+                    Figma and Canva. Other elements include screenshots and free assets sourced from Figma and Canva.
+                </p>
+            </div>
+            <div class="col-lg-2 my-2">
+                <img src="images/art1.png" class="img-fluid" alt="artAsset">
+                <h3 class="text-light my-2">Game Assets</h3>
+                <p class="text-secondary my-2">
+                    This is one of several sprites I created for an academic game project. The game's characters are 
+                    from the anime series, Jujutsu Kaisen.
+                </p>
+            </div>
+            <div class="col-lg-2 my-2">
+                <img src="images/art2.png" class="img-fluid" alt="artAsset">
+                <h3 class="text-light my-2">TICA Assets</h3>
+                <p class="text-secondary my-2">
+                    This is one of several custom assets I developed for TICA, designed to be user-engaging and 
+                    aligned with user needs.
+                </p>
             </div>
         </div>
-    </section>
+
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
@@ -204,25 +250,69 @@
                                 </div>
                             </div>
                         </a> 
-                        <h5>`+ outputNumber[i] +`</h5>
+                        <h5 style="color: #BDB5E3;">`+ outputNumber[i] +`</h5>
                         <h3 class="text-light">`+ outputName[i] +`</h3>
                         <p class="text-secondary">`+ outputDesc[i] +`</p>
                     </div>
                 </div>`
         };
 
-        var themeIcon = document.getElementById("themeIcon");
-        var banner = document.getElementById("banner");
+        var uiDate = [
+            "May 2023",
+            "January 2024",
+            "November 2023",
+            "August 2024",
+            "2025"
+        ]
+        var uiName = [
+            "URBN Project",
+            "ManongKrema Project",
+            "Positive Aid Link (PAL): A Mental Health Scheduling and Service Platform for HealSpace, Lipa",
+            "TICA: A Technological Innovation for Communication in Apraxia - A Mobile Application Utilizing AI-Driven Speech Therapy for Children with Apraxia",
+            "Other Works"
+        ]
+        var uiProj = [
+            "urbn.html",
+            "krema.html",
+            "pal.html",
+            "tica.html",
+            "other.html"
+        ]
+        var uiDesc = [
+            "URBN is a food and beverage website. This project marks my first UI design experience, and I am showcasing several pages I developed.",
+            "ManongKrema was my first experience designing a UI with a focus on administrative functions, requiring a different approach to visual content.",
+            "PAL was a group project in collaboration with HealSpace Psychological Clinic. This was my first client-based UI design project.",
+            "TICA, was our capstone project in collaboration with DreamLab Therapy Center, introduced me to the challenges and techniques of mobile UI design.",
+            "These are some of my recent projects, demonstrating the culmination of my UI design learning and experience."
+        ]
+        var uiThumbnail = [
+            "images/urbnThumbnail.png",
+            "images/kremaThumbnail.png",
+            "images/palThumbnail.png",
+            "images/ticaThumbnail.png",
+            "images/otherThumbnail.png"
+        ]
 
-        var theme = document.getElementById("themeToggle").addEventListener('click', () =>{
-            if (document.documentElement.getAttribute('data-bs-theme') == 'light'){
-            document.documentElement.setAttribute('data-bs-theme', 'dark')
-            themeIcon.className = "bi bi-moon";
-        } else{
-            document.documentElement.setAttribute('data-bs-theme', 'light')
-            themeIcon.className = "bi bi-sun";
-        }
-        });
+        for(var i = 0; i < uiProj.length; i++){
+            var container = document.getElementById("uiContainer");
+            container.innerHTML += `
+                <div class="col-lg-2 my-2">
+                    <div class="thumbnailBox mx-auto px-3 py-1">
+                        <a href="`+ uiProj[i] +`">
+                            <div class="thumbnailContainer my-3">
+                                <div class="thumbnailGradient"></div>
+                                <img src="`+ uiThumbnail[i] +`" class="thumbnail img-fluid" alt="uiThumbnail">
+                                <div class="card-img-overlay text-light text-center d-flex justify-content-center align-items-center">
+                                    <p>Learn more</p>
+                                </div>
+                            </div>
+                        </a> 
+                        <h5 style="color: #BDB5E3;">`+ uiDate[i] +`</h5>
+                        <h3 class="text-light">`+ uiName[i] +`</h3>
+                        <p class="text-secondary">`+ uiDesc[i] +`</p>
+                    </div>
+                </div>`
+        };
     </script>
 </body>
 </html>
