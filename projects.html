@@ -53,7 +53,6 @@
         } */
         .thumbnailContainer{
             width: 100%;
-            /* height: 100%; */
             max-height: 400px;
             position: relative;
             overflow: hidden;
@@ -95,11 +94,20 @@
             overflow-y: auto;
             overflow-x: hidden; 
         }
+        #artContainer img{
+            transition: 0.3s ease-in-out;
+        }
+        #artContainer img:hover{
+            transform: scale(1.02);
+        }
         @media (max-width: 575px){
             #projectsContainer{
                 text-align: center;
             }
             #uiContainer{
+                text-align: center;
+            }
+            #artContainer{
                 text-align: center;
             }
             .box{
@@ -149,67 +157,58 @@
           </div>
         </div>
       </nav>
-
-    <div class="container-fluid" id="hero">
-        <h1 class="text-light mb-5">Projects</h1>
-        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-secondary" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">UI/UX Design</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-secondary" id="profile-tab" data-bs-toggle="tab"
-                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                    aria-selected="false">Programming</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-secondary" id="contact-tab" data-bs-toggle="tab"
-                    data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                    aria-selected="false">Multimedia</button>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div class="row" id="uiContainer"></div>
+        
+        <div class="container my-5">
+            <div class="row" id="uiContainer">
+                <h1 class="text-light px-4 mt-5">UI/UX Designs</h1>
             </div>
-
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            <div class="row" id="projectsContainer"></div>
         </div>
 
-        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-            <div class="col-lg-2 my-2">
-                <img src="images/art.png" class="img-fluid" alt="artAsset">
-                <h3 class="text-light my-2">Grunge-style Assets</h3>
-                <p class="text-secondary my-2">
-                    The illustrations in these designs were created by me using Medibang, and then refined in 
-                    Figma and Canva. Other elements include screenshots and free assets sourced from Figma and Canva.
-                </p>
+        <hr class="hr" />
+
+        <div class="container">
+            <div class="row" id="projectsContainer">
+                <h1 class="text-light px-4 mt-5">Programming Projects</h1>
             </div>
-            <div class="col-lg-2 my-2">
-                <img src="images/art1.png" class="img-fluid" alt="artAsset">
-                <h3 class="text-light my-2">Game Assets</h3>
-                <p class="text-secondary my-2">
-                    This is one of several sprites I created for an academic game project. The game's characters are 
-                    from the anime series, Jujutsu Kaisen.
-                </p>
-            </div>
-            <div class="col-lg-2 my-2">
-                <img src="images/art2.png" class="img-fluid" alt="artAsset">
-                <h3 class="text-light my-2">TICA Assets</h3>
-                <p class="text-secondary my-2">
-                    This is one of several custom assets I developed for TICA, designed to be user-engaging and 
-                    aligned with user needs.
-                </p>
-            </div>
-            <div class="col-lg-2 my-2">
-                <img src="images/art3.png" class="img-fluid" alt="artAsset">
-                <h3 class="text-light my-2">SAM Brochure</h3>
-                <p class="text-secondary my-2">
-                    This is a brochure I created for an academic activity. The game is Tekken 8, and the goal of
-                    the activity is to determine what is system attributes, properties, and characteristics.
-                </p>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="container">
+            <div class="row" id="artContainer">
+                <h1 class="text-light px-4 mt-5">Multimedia</h1>
+                <div class="col-lg-2 my-3">
+                    <img src="images/art.png" class="img-fluid" alt="artAsset">
+                    <h3 class="text-light my-3">Grunge-style Assets</h3>
+                    <p class="text-secondary my-3">
+                        The illustrations in these designs were created by me using Medibang, and then refined in 
+                        Figma and Canva. Other elements include screenshots and free assets sourced from Figma and Canva.
+                    </p>
+                </div>
+                <div class="col-lg-2 my-3">
+                    <img src="images/art1.png" class="img-fluid" alt="artAsset">
+                    <h3 class="text-light my-3">Game Assets</h3>
+                    <p class="text-secondary my-3">
+                        This is one of several sprites I created for an academic game project. The game's characters are 
+                        from the anime series, Jujutsu Kaisen.
+                    </p>
+                </div>
+                <div class="col-lg-2 my-3">
+                    <img src="images/art2.png" class="img-fluid" alt="artAsset">
+                    <h3 class="text-light my-3">TICA Assets</h3>
+                    <p class="text-secondary my-3">
+                        This is one of several custom assets I developed for TICA, designed to be user-engaging and 
+                        aligned with user needs.
+                    </p>
+                </div>
+                <div class="col-lg-2 my-3">
+                    <img src="images/art3.png" class="img-fluid" alt="artAsset">
+                    <h3 class="text-light my-3">SAM Brochure</h3>
+                    <p class="text-secondary my-3">
+                        This is a brochure I created for an academic activity. The game is Tekken 8, and the goal of
+                        the activity is to determine what is system attributes, properties, and characteristics.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -241,7 +240,7 @@
         var outputThumbnail = [
             "https://i.imgur.com/pMcPLPE.png",
             "https://i.imgur.com/07jmhaO.png",
-            "https://i.imgur.com/IHNYJy1.png"
+            "images/vidThumbnail.png"
         ]
 
         for(var i = 0; i < output.length; i++){
