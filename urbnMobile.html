@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres' Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/isOXdFy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        html, body{
+            background-color: #0D0D0D;
+            font-family: "Bebas Neue", "sans-serif";
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-family: "Montserrat", "sans-serif";
+        }
+        a{
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff;
+        }
+        #filledBtn{
+            background-color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+        #filledBtn:hover, #filledBtn:focus{
+            background-color: #7862E8;
+            border-color: #7862E8;
+            color: #fff;
+        }
+        #ghostBtn{
+            border: 1px solid #fff;
+            border-radius: 24px;
+        }
+        #ghostBtn:hover, #ghostBtn:focus{
+            background-color: #7862E8;
+            border-color: #7862E8;
+            color: #fff;
+        }
+        hr{
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        }
+        @media (max-width: 575px){
+            #hero{
+                min-height: auto;
+                padding: 24px 8px;
+            }
+            #hero img{
+                max-width: 80%;
+            }
+            @media (max-width: 200px){
+                #hero .heroButton{
+                    display: none;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            CGT Portfolio
+            <img src="https://i.imgur.com/isOXdFy.png" alt="logo" style="height: 24px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" style="background-color: #1A1A1A;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-light fs-1" id="offcanvasNavbarLabel">
+                CGT Portfolio
+                <img src="https://i.imgur.com/isOXdFy.png" alt="logo" style="height: 32px;">
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="projects.html">Projects</a>
+                  </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-light mt-5 mb-2">About URBN Mobile</h1>
+            <div class="col-lg-6">
+                <img src="images/urbnMobileMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <!-- <div class="col-lg-6">
+                <img src="images/urbnMobileMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+            </div> -->
+            <P class="text-secondary my-4">
+                This project showcase the application of skills and knowledge acquired throughout my previous work.  
+                I focused on efficient design processes, including advanced use of Figma. URBN Mobile concept (developed with permission), 
+		        were undertaken to further refine my mobile design workflow.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h3 class="text-light mt-3 mb-2">Building URBN Mobile: The Why Behind the What</h3>
+            <div class="col-lg-6">
+                <img src="images/urbnMobileDesign.png" alt="designImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <div class="col-lg-6">
+                <img src="images/urbnMobileDesign1.png" alt="designImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <P class="text-secondary my-4">
+                The design for URBN Mobile builds upon our group's previous work on the URBN web version. However, to optimize for mobile use,
+                I made specific adjustments. For example, the original lighter primary color was darkened to #6A0DAD, enhancing readability and 
+                contrast on smaller screens. This adaptation, along with maintaining consistent fonts and assets, ensures a familiar user experience.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h3 class="text-light mt-3 mb-2">Behind the Interface: URBN Mobile's System Logic</h3>
+            <div class="col-lg-4">
+                <img src="images/urbnMobileFlow.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <div class="col-lg-4">
+                <img src="images/urbnMobileFlow1.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <div class="col-lg-4">
+                <img src="images/urbnMobileFlow2.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+            </div>
+            <P class="text-secondary my-4">
+                The system logic for URBN Mobile mirrors the original web version. While the web version was fully developed, these mobile designs 
+                are conceptual. Page connectivity and core logic remain consistent, with minor additions and tweaks that maintain user familiarity. 
+                The primary mobile enhancement is the introduction of item/product reviews, a feature I decided to add as it is commonly found in most 
+                e-commerce mobile apps, and absent from the web version.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="text-center text-secondary">
+        <small><p>Thank you for reading!</p></small>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn text-light px-5 py-2 rounded-1 me-2 my-2" href="projects.html" type="button" id="ghostBtn">
+            Go Back
+        </a>
+        <a href="https://drive.google.com/drive/folders/1Lpai4IYD2f0RRs24wvuKQSsOHIVQhtfJ?usp=drive_link" class="btn px-5 py-2 rounded-1 me-2" target="_blank" id="filledBtn">
+            <i class="fa-brands fa-google-drive me-2"></i>
+            See all Pages
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

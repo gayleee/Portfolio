@@ -100,6 +100,11 @@
         #artContainer img:hover{
             transform: scale(1.02);
         }
+        hr{
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        }
         @media (max-width: 575px){
             #projectsContainer{
                 text-align: center;
@@ -176,7 +181,7 @@
             </div>
         </div>
 
-        <hr class="hr text-light" />
+        <hr>
 
         <div class="container">
             <div class="row" id="artContainer">
@@ -190,7 +195,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <img src="images/art1.png" class="img-fluid" alt="artAsset">
+                    <img src="images/art1.gif" class="img-fluid" alt="artAsset">
                     <h3 class="text-light my-3">Game Assets</h3>
                     <p class="text-secondary my-3">
                         This is one of several sprites I created for an academic game project. The game's characters are 
@@ -243,23 +248,28 @@
     <script>
         var outputNumber = [
             "SAM A02",
-            "SAM M01"
+            "SAM M01",
+            "SAM F01"
         ]
         var outputName = [
             "Germany Tour Website",
-            "Youtube Video Integration Website"
+            "Youtube Video Integration Website",
+            "SHIFT: An Online Bike Website"
         ]
         var output = [
             "A02/index.html",
-            "M01/index.html"
+            "M01/index.html",
+            "F01/index.html"
         ]
         var outputDesc = [
             "This website is designed to showcase a location of our choice. The main requirement is that it must be responsive using Bootstrap classes.",
-            "This website utilizes youtube embed API. The main requirement is it must be responsive using Bootstrap classes."
+            "This website utilizes youtube embed API. The main requirement is it must be responsive using Bootstrap classes.",
+            "This website is my final academic output for the SAM Course. The main requirement is it must be responsive using Bootstrap classes."
         ]
         var outputThumbnail = [
             "https://i.imgur.com/pMcPLPE.png",
-            "images/vidThumbnail.png"
+            "images/vidThumbnail.png",
+            "images/shiftThumbnaiL1.png"
         ]
 
         for(var i = 0; i < output.length; i++){
@@ -288,35 +298,40 @@
             "January 2024",
             "November 2023",
             "August 2024",
-            "2025"
+            "January 2025",
+            "February 2025"
         ]
         var uiName = [
             "URBN Project",
             "ManongKrema Project",
             "Positive Aid Link (PAL): A Mental Health Scheduling and Service Platform for HealSpace, Lipa",
             "TICA: A Technological Innovation for Communication in Apraxia - A Mobile Application Utilizing AI-Driven Speech Therapy for Children with Apraxia",
-            "Other Projects"
+            "SHIFT: An Online Bike Website",
+            "URBN Mobile"
         ]
         var uiProj = [
             "urbn.html",
             "krema.html",
             "pal.html",
             "tica.html",
-            "other.html"
+            "shift.html",
+            "urbnMobile.html"
         ]
         var uiDesc = [
             "URBN is a food and beverage website. This project marks my first UI design experience, and I am showcasing several pages I developed.",
             "ManongKrema was my first experience designing a UI with a focus on administrative functions, requiring a different approach to visual content.",
             "PAL was a group project in collaboration with HealSpace Psychological Clinic. This was my first client-based UI design project.",
             "TICA, was our capstone project in collaboration with DreamLab Therapy Center, introduced me to the challenges and techniques of mobile UI design.",
-            "These are some of my recent projects, demonstrating the culmination of my UI design learning and experience."
+            "SHIFT, my final System Administration and Maintenance (SAM) project, required the integration of robust system administration with careful user-interface design.",
+            "This recent mobile UI project represents my adaptation of our group's previous work, showcasing the culmination of my design learning and experience in a mobile context."
         ]
         var uiThumbnail = [
             "images/urbnThumbnail.png",
             "images/kremaThumbnail.png",
             "images/palThumbnail.png",
             "images/ticaThumbnail.png",
-            "images/otherThumbnail.png"
+            "images/shiftThumbnail.png",
+            "images/urbnMobileThumbnail.png"
         ]
 
         for(var i = 0; i < uiProj.length; i++){
