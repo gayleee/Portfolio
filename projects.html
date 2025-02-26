@@ -21,19 +21,6 @@
         p{
             font-family: "Montserrat", "sans-serif";
         }
-        /* a{
-            font-size: 24px;
-            text-decoration: none;
-            color: #fff;
-        } */
-        /* .btn{
-            font-size: 24px;
-            background-color: #7862E8;
-            transition: ease-in-out 0.3s;
-        }
-        .btn:hover{
-            background-color: #7862E8;
-        } */
         #hero{
             background-image: url(images/bg.png);
             background-size: cover;
@@ -42,15 +29,6 @@
             width: 100%;
             overflow: hidden;
         }
-        /* #hero a{
-            display: inline-block;
-            margin: 8px 0;
-        }
-        #hero img{
-            max-width: 80%;
-            height: auto;
-            margin-bottom: 16px;
-        } */
         .thumbnailContainer{
             width: 100%;
             max-height: 400px;
@@ -94,16 +72,19 @@
             overflow-y: auto;
             overflow-x: hidden; 
         }
-        #artContainer img{
+        .artContainer img{
             transition: 0.3s ease-in-out;
         }
-        #artContainer img:hover{
+        .artContainer img:hover{
             transform: scale(1.02);
         }
         hr{
             border: 0;
             height: 1px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        }
+        .artImg{
+            cursor: pointer;
         }
         @media (max-width: 575px){
             #projectsContainer{
@@ -184,48 +165,134 @@
         <hr>
 
         <div class="container">
-            <div class="row" id="artContainer">
+            <div class="row">
                 <h1 class="text-light px-4 mt-5">Multimedia</h1>
                 <div class="col-lg-6 my-3">
-                    <img src="images/art.png" class="img-fluid" alt="artAsset">
+                    <div class="artContainer">
+                        <img src="images/art.png" class="img-fluid artImg" alt="artAsset" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </div>
                     <h3 class="text-light my-3">Grunge-style Assets</h3>
                     <p class="text-secondary my-3">
                         The illustrations in these designs were created by me using Medibang, and then refined in 
                         Figma and Canva. Other elements include screenshots and free assets sourced from Figma and Canva.
                     </p>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                          <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                            <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/art.png" class="img-fluid" alt="artAsset">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-lg-6 my-3">
-                    <img src="images/art1.gif" class="img-fluid" alt="artAsset">
+                    <div class="artContainer">
+                        <img src="images/art1.gif" class="img-fluid artImg" alt="artAsset1" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    </div>
                     <h3 class="text-light my-3">Game Assets</h3>
                     <p class="text-secondary my-3">
                         This is one of several sprites I created for an academic game project. The game's characters are 
                         from the anime series, Jujutsu Kaisen.
                     </p>
+
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                          <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                            <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel1">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mx-auto">
+                                <img src="images/art1.gif" class="img-fluid" alt="artAsset1">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-lg-6 my-3">
-                    <img src="images/art2.png" class="img-fluid" alt="artAsset">
+                    <div class="artContainer">
+                        <img src="images/art2.png" class="img-fluid artImg" alt="artAsset2" alt="artAsset" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    </div>
                     <h3 class="text-light my-3">TICA Assets</h3>
                     <p class="text-secondary my-3">
                         This is one of several custom assets I developed for TICA, designed to be user-engaging and 
                         aligned with user needs.
                     </p>
+
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                          <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                            <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel2">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/art2.png" class="img-fluid" alt="artAsset2">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-lg-6 my-3">
-                    <img src="images/art3.png" class="img-fluid" alt="artAsset">
+                    <div class="artContainer">
+                        <img src="images/art3.png" class="img-fluid artImg" alt="artAsset3" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    </div>
                     <h3 class="text-light my-3">ManongKrema Assets</h3>
                     <p class="text-secondary my-3">
                         Created these assets for the user-side interface.  While we intended for them to be used in a 
                         parallax effect on the landing page, ultimately only a small selection were implemented.
                     </p>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                          <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                            <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel3">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/art3.png" class="img-fluid" alt="artAsset3">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-lg-6 my-3">
-                    <img src="images/art4.png" class="img-fluid" alt="artAsset">
+                    <div class="artContainer">
+                        <img src="images/art4.png" class="img-fluid artImg" alt="artAsset4" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    </div>
                     <h3 class="text-light my-3">SAM Brochure</h3>
                     <p class="text-secondary my-3">
                         This is a brochure I created for an academic activity. The game is Tekken 8, and the goal of
                         the activity is to determine what is system attributes, properties, and characteristics.
                     </p>
+
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                            <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel4">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/art4.png" class="img-fluid mb-2" alt="artAsset4">
+                                <img src="images/art4.1.png" class="img-fluid" alt="artAsset4.1">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -267,7 +334,7 @@
             "This website is my final academic output for the SAM Course. The main requirement is it must be responsive using Bootstrap classes."
         ]
         var outputThumbnail = [
-            "https://i.imgur.com/pMcPLPE.png",
+            "images/germanyThumbnail.png",
             "images/vidThumbnail.png",
             "images/shiftThumbnail1.png"
         ]
@@ -294,10 +361,10 @@
         };
 
         var uiDate = [
-            "May 2023",
-            "January 2024",
-            "November 2023",
-            "August 2024",
+            "May 2023 - July 2023",
+            "January 2024 - May 2024",
+            "November 2023 - June 2024",
+            "August 2024 - January 2025",
             "January 2025",
             "February 2025"
         ]
