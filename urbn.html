@@ -50,18 +50,12 @@
             height: 1px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
         }
+        .uiImg{
+            cursor: pointer;
+        }
         @media (max-width: 575px){
-            #hero{
-                min-height: auto;
-                padding: 24px 8px;
-            }
-            #hero img{
-                max-width: 80%;
-            }
-            @media (max-width: 200px){
-                #hero .heroButton{
-                    display: none;
-                }
+          .container{
+                text-align: center;
             }
         }
     </style>
@@ -103,17 +97,45 @@
       <div class="container">
         <div class="row">
             <h1 class="text-light mt-5 mb-2">About URBN</h1>
-            <div class="col-lg-6">
-                <img src="images/urbnMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+            <div class="col-lg-6 uiImg">
+                <img src="images/urbnMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
             </div>
-            <div class="col-lg-6">
-                <img src="images/urbnMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+            <div class="col-lg-6 uiImg">
+                <img src="images/urbnMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4" data-bs-toggle="modal" data-bs-target="#exampleModal1">
             </div>
             <P class="text-secondary my-4">
               Despite limited prior experience, I developed several key pages that 
               served as the foundation for our developers' work. This process provided me with 
               valuable exposure to fundamental UI/UX principles.
             </p>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details Page</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMockup.png" class="img-fluid" alt="mockupImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                  <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Privacy Policy Page</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="images/urbnMockup1.png" class="img-fluid" alt="mockupImage1">
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
     </div>
 

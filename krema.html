@@ -50,18 +50,12 @@
             height: 1px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
         }
+        .uiImg{
+            cursor: pointer;
+        }
         @media (max-width: 575px){
-            #hero{
-                min-height: auto;
-                padding: 24px 8px;
-            }
-            #hero img{
-                max-width: 80%;
-            }
-            @media (max-width: 200px){
-                #hero .heroButton{
-                    display: none;
-                }
+          .container{
+                text-align: center;
             }
         }
     </style>
@@ -104,7 +98,7 @@
         <div class="row">
             <h1 class="text-light mt-5 mb-2">About ManongKrema</h1>
             <div class="col-lg-6">
-                <img src="images/kremaMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/kremaMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal">
             </div>
             <P class="text-secondary my-4">
               This single-page UI design was implemented during development, as I also served as 
@@ -118,6 +112,20 @@
               Final data structures and content are subject to change due to evolving project requirements.
               </strong>
             </p>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                  <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">ManongKrema</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="images/kremaMockup.png" class="img-fluid" alt="mockupImage">
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
     </div>
 

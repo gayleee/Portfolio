@@ -50,18 +50,12 @@
             height: 1px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
         }
+        .uiImg{
+            cursor: pointer;
+        }
         @media (max-width: 575px){
-            #hero{
-                min-height: auto;
-                padding: 24px 8px;
-            }
-            #hero img{
-                max-width: 80%;
-            }
-            @media (max-width: 200px){
-                #hero .heroButton{
-                    display: none;
-                }
+            .container{
+                text-align: center;
             }
         }
     </style>
@@ -104,10 +98,10 @@
         <div class="row">
             <h1 class="text-light mt-5 mb-2">About PAL</h1>
             <div class="col-lg-6">
-                <img src="images/palMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palMockup.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal">
             </div>
             <div class="col-lg-6">
-                <img src="images/palMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal1">
             </div>
             <P class="text-secondary my-4">
               Positive Aid Link (PAL), a mental health scheduling and service platform developed in collaboration with HealSpace Psychological Clinic in Lipa, 
@@ -120,6 +114,34 @@
               significant experience in communicating user requirements and planning page 
               connectivity.
             </p>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Positive Aid Link (PAL) Admin Side</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palMockup.png" class="img-fluid" alt="mockupImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel1">Positive Aid Link (PAL) Consultant Side</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palMockup1.png" class="img-fluid" alt="mockupImage1">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -127,15 +149,43 @@
         <div class="row">
             <h3 class="text-light mt-3 mb-2">Building PAL: The Why Behind the What</h3>
             <div class="col-lg-6">
-                <img src="images/palDesign.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palDesign.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             </div>
             <div class="col-lg-6">
-                <img src="images/palDesign1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palDesign1.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal3">
             </div>
             <P class="text-secondary my-4">
               Our design choices were guided by the goal of meeting the needs of both the clinic staff and their clients. We explored various font and 
               color options, carefully considering the clinic's established identity to achieve a balance between brand alignment and user accessibility.
             </p>
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel2">Positive Aid Link (PAL) Typeface</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palDesign.png" class="img-fluid" alt="designImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel3">Positive Aid Link (PAL) Color Scheme</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palDesign1.png" class="img-fluid" alt="designImage1">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -143,10 +193,10 @@
         <div class="row">
             <h3 class="text-light mt-3 mb-2">Behind the Interface: PAL's System Logic</h3>
             <div class="col-lg-6">
-                <img src="images/palFlow.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palFlow.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal4">
             </div>
             <div class="col-lg-6">
-                <img src="images/palFlow1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
+                <img src="images/palFlow1.png" alt="mockupImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal5">
             </div>
             <P class="text-secondary my-4">
               As UI/UX designers and front-end developers, my colleague and I collaborated closely on this project. 
@@ -158,6 +208,34 @@
               Both sides reflect the same core functions, but with varying levels of access and permissions. Administrators were 
               granted the highest level of control.
             </p>
+
+            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel4">Positive Aid Link (PAL) Consultant Pages</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palFlow.png" class="img-fluid" alt="flowImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel5">Positive Aid Link (PAL) Admin Pages</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/palFlow1.png" class="img-fluid" alt="flowImage1">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 

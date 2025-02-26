@@ -50,18 +50,12 @@
             height: 1px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
         }
+        .uiImg{
+            cursor: pointer;
+        }
         @media (max-width: 575px){
-            #hero{
-                min-height: auto;
-                padding: 24px 8px;
-            }
-            #hero img{
-                max-width: 80%;
-            }
-            @media (max-width: 200px){
-                #hero .heroButton{
-                    display: none;
-                }
+            .container{
+                text-align: center;
             }
         }
     </style>
@@ -104,7 +98,7 @@
         <div class="row">
             <h1 class="text-light mt-5 mb-2">About URBN Mobile</h1>
             <div class="col-lg-6">
-                <img src="images/urbnMMockup.png" alt="mockupImage1" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMMockup.png" alt="mockupImage1" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal">
             </div>
             <!-- <div class="col-lg-6">
                 <img src="images/urbnMobileMockup1.png" alt="mockupImage" class="img-fluid rounded-1 my-4">
@@ -114,6 +108,20 @@
                 I focused on efficient design processes, including advanced use of Figma. URBN Mobile concept (developed with permission), 
 		        were undertaken to further refine my mobile design workflow.
             </p>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">URBN Mobile</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMMockup.png" class="img-fluid" alt="mockupImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -121,16 +129,44 @@
         <div class="row">
             <h3 class="text-light mt-3 mb-2">Building URBN Mobile: The Why Behind the What</h3>
             <div class="col-lg-6">
-                <img src="images/urbnMobileDesign.png" alt="designImage" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMobileDesign.png" alt="designImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal1">
             </div>
             <div class="col-lg-6">
-                <img src="images/urbnMobileDesign1.png" alt="designImage" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMobileDesign1.png" alt="designImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             </div>
             <P class="text-secondary my-4">
                 The design for URBN Mobile builds upon our group's previous work on the URBN web version. However, to optimize for mobile use,
                 I made specific adjustments. For example, the original lighter primary color was darkened to #6A0DAD, enhancing readability and 
                 contrast on smaller screens. This adaptation, along with maintaining consistent fonts and assets, ensures a familiar user experience.
             </p>
+
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel1">URBN Mobile Color Scheme</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMobileDesign.png" class="img-fluid" alt="designImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel2">URBN Mobile Typeface</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMobileDesign1.png" class="img-fluid" alt="designImage1">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -138,13 +174,13 @@
         <div class="row">
             <h3 class="text-light mt-3 mb-2">Behind the Interface: URBN Mobile's System Logic</h3>
             <div class="col-lg-4">
-                <img src="images/urbnMobileFlow.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMobileFlow.png" alt="flowImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal3">
             </div>
             <div class="col-lg-4">
-                <img src="images/urbnMobileFlow1.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMobileFlow1.png" alt="flowImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal4">
             </div>
             <div class="col-lg-4">
-                <img src="images/urbnMobileFlow2.png" alt="flowImage" class="img-fluid rounded-1 my-4">
+                <img src="images/urbnMobileFlow2.png" alt="flowImage" class="img-fluid rounded-1 my-4 uiImg" data-bs-toggle="modal" data-bs-target="#exampleModal5">
             </div>
             <P class="text-secondary my-4">
                 The system logic for URBN Mobile mirrors the original web version. While the web version was fully developed, these mobile designs 
@@ -152,6 +188,48 @@
                 The primary mobile enhancement is the introduction of item/product reviews, a feature I decided to add as it is commonly found in most 
                 e-commerce mobile apps, and absent from the web version.
             </p>
+
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel3">Getting Started Pages</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMobileFlow.png" class="img-fluid" alt="flowImage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel4">Menu & Cart Pages</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMobileFlow1.png" class="img-fluid" alt="flowImage1">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content bg-dark text-light" data-bs-theme="dark">
+                    <div class="modal-header" style="border-bottom: 1px solid #1A1A1A;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel5">Profile Preference Pages</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/urbnMobileFlow2.png" class="img-fluid" alt="flowImage2">
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
 
